@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-bg-center: #f0f0f0;
+  --color-bg-side: #0a1a1a;
+  --color-text-main: #1a1a1a;
+  --color-text-muted: #666666;
+  --color-accent: #ff7eb9;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg-side)] text-[var(--color-text-main)] font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.iridescent-side {
+  background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(140deg) brightness(0.6) contrast(1.2);
+}
+
+.center-column {
+  background-color: var(--color-bg-center);
+  position: relative;
+}
+
+.center-leaves {
+  background-image: url("https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=1000&auto=format&fit=crop");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  filter: grayscale(1);
+}
+
+.glass-dark {
+  @apply bg-black/80 backdrop-blur-md border border-white/10;
+}
+
+.glass-light {
+  @apply bg-white/40 backdrop-blur-md border border-black/5;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
